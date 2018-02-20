@@ -898,7 +898,8 @@ void GMainWindow::OnMenuReportCompatibility() {
         QMessageBox::critical(
             this, tr("Missing Citra Account"),
             tr("In order to submit a game compatibility test case, you must link your Citra "
-               "account.<br><br/>To link your Citra account, go to Emulation &gt; Configuration &gt; "
+               "account.<br><br/>To link your Citra account, go to Emulation &gt; Configuration "
+               "&gt; "
                "Web."));
     }
 }
@@ -1046,11 +1047,10 @@ void GMainWindow::UpdateStatusBar() {
 
     if (Settings::values.use_frame_limit) {
         emu_speed_label->setText(tr("Speed: %1% / %2%")
-                                    .arg(results.emulation_speed * 100.0, 0, 'f', 0)
-                                    .arg(Settings::values.frame_limit));
+                                     .arg(results.emulation_speed * 100.0, 0, 'f', 0)
+                                     .arg(Settings::values.frame_limit));
     } else {
-        emu_speed_label->setText(tr("Speed: %1%")
-                                    .arg(results.emulation_speed * 100.0, 0, 'f', 0));
+        emu_speed_label->setText(tr("Speed: %1%").arg(results.emulation_speed * 100.0, 0, 'f', 0));
     }
     game_fps_label->setText(tr("Game: %1 FPS").arg(results.game_fps, 0, 'f', 0));
     emu_frametime_label->setText(tr("Frame: %1 ms").arg(results.frametime * 1000.0, 0, 'f', 2));
