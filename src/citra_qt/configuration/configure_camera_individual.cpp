@@ -9,8 +9,6 @@
 #include "core/settings.h"
 #include "ui_configure_camera_individual.h"
 
-
-
 ConfigureCameraIndividual::ConfigureCameraIndividual(QWidget* parent)
     : QWidget(parent), ui(new Ui::ConfigureCameraIndividual) {
     ui->setupUi(this);
